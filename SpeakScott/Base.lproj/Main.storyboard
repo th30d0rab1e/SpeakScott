@@ -30,13 +30,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yza-Op-fLt">
+                                <rect key="frame" x="166" y="394" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="od9-vs-cp9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8ie-FK-rGe"/>
                             <constraint firstItem="k0m-1h-plO" firstAttribute="top" secondItem="od9-vs-cp9" secondAttribute="bottom" constant="50" id="Sgb-N9-md8"/>
+                            <constraint firstItem="yza-Op-fLt" firstAttribute="top" secondItem="k0m-1h-plO" secondAttribute="bottom" constant="50" id="Spq-e8-Ney"/>
                             <constraint firstItem="k0m-1h-plO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cd0-5d-v0v"/>
+                            <constraint firstItem="yza-Op-fLt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mYO-6G-fSC"/>
                             <constraint firstItem="k0m-1h-plO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xha-GX-ioc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -50,6 +58,7 @@
                     <connections>
                         <outlet property="swipeLabel" destination="od9-vs-cp9" id="Bym-Ul-TnL"/>
                         <outlet property="theLabel" destination="k0m-1h-plO" id="1uA-XS-pbn"/>
+                        <outlet property="wordLabel" destination="yza-Op-fLt" id="Fcx-Iu-oOi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

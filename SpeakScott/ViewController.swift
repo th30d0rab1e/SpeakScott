@@ -13,13 +13,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     @IBOutlet weak var swipeLabel: UILabel!
+    @IBOutlet weak var wordLabel: UILabel!
     
     var listOfQuestions  : [List] = []
-    var index = 1;
+    var index = 0;
     var word:String = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.becomeFirstResponder() // To get shake gesture
         
         // Do any additional setup after loading the view, typically from a nib.
        // let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //step1 of CoreData
@@ -30,6 +32,7 @@ class ViewController: UIViewController {
         addTestData()
         
         theLabel.text = listOfQuestions[index].question
+        wordLabel.text = word;
         
         let string:String! = listOfQuestions[index].question
         let utterance = AVSpeechUtterance(string: string)
@@ -91,6 +94,7 @@ class ViewController: UIViewController {
         {
             word += listOfQuestions[index].question
             print("Word is", word)
+            wordLabel.text = word;
         }
         
     }
@@ -112,6 +116,7 @@ class ViewController: UIViewController {
         {
             word = String(word.characters.dropLast())
             print("Word is", word)
+            wordLabel.text = word
         }
     }
     
@@ -164,7 +169,7 @@ class ViewController: UIViewController {
         letterD.question = "D"
         letterD.approval = "D added to word"
         letterD.rejection = "Removed"
-        letterA.type = 1
+        letterD.type = 1
         
         let letterE = List()
         letterE.question = "E"
@@ -299,6 +304,24 @@ class ViewController: UIViewController {
         letterZ.type = 1
         
         listOfQuestions = [x, y, z, letterA, letterB, letterC,letterD,letterE,letterF, letterG, letterH, letterI,letterJ, letterK, letterL, letterM, letterN, letterO, letterP, letterQ, letterR, letterS, letterT, letterU, letterV, letterW, letterX, letterY, letterZ]
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            swipeLabel.text = "Shake and Bake"
+            let string:String! = word
+            let utterance = AVSpeechUtterance(string: string!)
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            let synth = AVSpeechSynthesizer()
+            synth.speak(utterance)
+        }
     }
     //get Questions
 //    func getQuestions() {
