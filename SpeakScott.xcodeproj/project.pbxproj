@@ -14,6 +14,10 @@
 		9CBB61642086E1EA004F61B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CBB61632086E1EA004F61B7 /* Assets.xcassets */; };
 		9CBB61672086E1EA004F61B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBB61652086E1EA004F61B7 /* LaunchScreen.storyboard */; };
 		9CDECC90208D1891003C9262 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDECC8F208D1891003C9262 /* List.swift */; };
+		9CDECC92209014A3003C9262 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDECC91209014A3003C9262 /* RegisterViewController.swift */; };
+		9CDECC94209014B7003C9262 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDECC93209014B7003C9262 /* LoginViewController.swift */; };
+		9CDECC96209153BE003C9262 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDECC95209153BE003C9262 /* User.swift */; };
+		9CDECC9820940886003C9262 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDECC9720940886003C9262 /* AdminViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		9CBB61662086E1EA004F61B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CBB61682086E1EA004F61B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CDECC8F208D1891003C9262 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		9CDECC91209014A3003C9262 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9CDECC93209014B7003C9262 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9CDECC95209153BE003C9262 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9CDECC9720940886003C9262 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +68,15 @@
 			children = (
 				9CBB61592086E1E6004F61B7 /* AppDelegate.swift */,
 				9CBB615B2086E1E6004F61B7 /* ViewController.swift */,
+				9CDECC91209014A3003C9262 /* RegisterViewController.swift */,
+				9CDECC93209014B7003C9262 /* LoginViewController.swift */,
 				9CBB615D2086E1E6004F61B7 /* Main.storyboard */,
+				9CDECC9720940886003C9262 /* AdminViewController.swift */,
 				9CBB61632086E1EA004F61B7 /* Assets.xcassets */,
 				9CBB61652086E1EA004F61B7 /* LaunchScreen.storyboard */,
 				9CBB61682086E1EA004F61B7 /* Info.plist */,
 				9CBB61602086E1E6004F61B7 /* SpeakScott.xcdatamodeld */,
+				9CDECC95209153BE003C9262 /* User.swift */,
 				9CDECC8F208D1891003C9262 /* List.swift */,
 			);
 			path = SpeakScott;
@@ -141,10 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDECC94209014B7003C9262 /* LoginViewController.swift in Sources */,
 				9CBB61622086E1E6004F61B7 /* SpeakScott.xcdatamodeld in Sources */,
+				9CDECC92209014A3003C9262 /* RegisterViewController.swift in Sources */,
 				9CDECC90208D1891003C9262 /* List.swift in Sources */,
+				9CDECC9820940886003C9262 /* AdminViewController.swift in Sources */,
 				9CBB615C2086E1E6004F61B7 /* ViewController.swift in Sources */,
 				9CBB615A2086E1E6004F61B7 /* AppDelegate.swift in Sources */,
+				9CDECC96209153BE003C9262 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

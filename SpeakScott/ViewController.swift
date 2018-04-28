@@ -51,11 +51,10 @@ class ViewController: UIViewController {
         swipeLabel.text = "Swiped Right"
         index = index + 1;
         
-        print("Index is currently ", index)
-        print("Count of array is ", listOfQuestions.count)
+//        print("Index is currently ", index)
+//        print("Count of array is ", listOfQuestions.count)
         
         if (index == listOfQuestions.count){
-            print("k im gonna fix it?")
             index = 0
         }
         speakNext(entity: index)
@@ -66,14 +65,12 @@ class ViewController: UIViewController {
         swipeLabel.text = "Swiped Left"
         index = index - 1;
         
-        print("Index is currently ", index)
-        print("Count of array is ", listOfQuestions.count)
+//        print("Index is currently ", index)
+//        print("Count of array is ", listOfQuestions.count)
         
         if (index == -1){
-            print("k im gonna fix it?")
             index = listOfQuestions.count - 1
         }
-
        speakNext(entity: index)
     }
     //Swiped Up
@@ -115,7 +112,7 @@ class ViewController: UIViewController {
         if (listOfQuestions[index].type == 1)
         {
             word = String(word.characters.dropLast())
-            print("Word is", word)
+//            print("Word is", word)
             wordLabel.text = word
         }
     }
@@ -130,8 +127,19 @@ class ViewController: UIViewController {
         theLabel.text = string
     }
     
+    @IBAction func BackToAdmin(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     func addTestData() {
         //test data
+        let devon = List()
+        devon.question = "Wanna come over?"
+        devon.approval = "Yes, I want to come over."
+        devon.rejection = "fuck no"
+        
         let x = List()
         x.question = "Do you want some wine?"
         x.approval = "Yes, I want some wine."
@@ -303,7 +311,7 @@ class ViewController: UIViewController {
         letterZ.rejection = "Removed"
         letterZ.type = 1
         
-        listOfQuestions = [x, y, z, letterA, letterB, letterC,letterD,letterE,letterF, letterG, letterH, letterI,letterJ, letterK, letterL, letterM, letterN, letterO, letterP, letterQ, letterR, letterS, letterT, letterU, letterV, letterW, letterX, letterY, letterZ]
+        listOfQuestions = [x, y, z, letterA, letterB, letterC,letterD,letterE,letterF, letterG, letterH, letterI,letterJ, letterK, letterL, letterM, letterN, letterO, letterP, letterQ, letterR, letterS, letterT, letterU, letterV, letterW, letterX, letterY, letterZ, devon]
     }
     
     override var canBecomeFirstResponder: Bool {
