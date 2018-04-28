@@ -135,10 +135,6 @@ class ViewController: UIViewController {
     
     func addTestData() {
         //test data
-        let devon = List()
-        devon.question = "Wanna come over?"
-        devon.approval = "Yes, I want to come over."
-        devon.rejection = "fuck no"
         
         let x = List()
         x.question = "Do you want some wine?"
@@ -311,7 +307,7 @@ class ViewController: UIViewController {
         letterZ.rejection = "Removed"
         letterZ.type = 1
         
-        listOfQuestions = [x, y, z, letterA, letterB, letterC,letterD,letterE,letterF, letterG, letterH, letterI,letterJ, letterK, letterL, letterM, letterN, letterO, letterP, letterQ, letterR, letterS, letterT, letterU, letterV, letterW, letterX, letterY, letterZ, devon]
+        listOfQuestions = [x, y, z, letterA, letterB, letterC,letterD,letterE,letterF, letterG, letterH, letterI,letterJ, letterK, letterL, letterM, letterN, letterO, letterP, letterQ, letterR, letterS, letterT, letterU, letterV, letterW, letterX, letterY, letterZ]
     }
     
     override var canBecomeFirstResponder: Bool {

@@ -74,11 +74,16 @@ class LoginViewController: UIViewController {
         z.role = 2 //Meat Popsicle
         
         let d = User()
-        d.username = "devon"
-        d.password = "5676"
+        d.username = "dad"
+        d.password = "1234"
         d.role = 2
         
-        users = [x, y, z, d]
+        let m = User()
+        m.username = "mom"
+        m.password = "1234"
+        m.role = 0
+        
+        users = [x, y, z, d, m]
     }
 
     /*
