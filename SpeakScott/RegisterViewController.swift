@@ -27,16 +27,16 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func SubmitButton(_ sender: Any) {
-        if(emailAddress.text! == "" || emailAddress.text! == nil){
-            emailAddress.text! = "Cannot be empty";
-        } else if (password1.text! == "" || password1.text! == nil){
-            password1.text! = "Cannot be empty";
-        } else if (password2.text! == "" || password2.text! == nil){
-            password2.text! = "Cannot be empty"
-        } else if (password1.text! != password2.text!) {
-            password1.text! = "Password does not match"
-            password2.text! = "Password does not match"
-        } else if (emailAddress.text! == "Cannot be empty" || password1.text! == "Cannot be empty" || password2.text! == "Cannot be empty") {
+        if(emailAddress.text == "" || emailAddress.text == nil){
+            emailAddress.text = "Cannot be empty";
+        } else if (password1.text == "" || password1.text == nil){
+            password1.text = "Cannot be empty";
+        } else if (password2.text == "" || password2.text == nil){
+            password2.text = "Cannot be empty"
+        } else if (password1.text != password2.text!) {
+            password1.text = "Password does not match"
+            password2.text = "Password does not match"
+        } else if (emailAddress.text == "Cannot be empty" || password1.text == "Cannot be empty" || password2.text == "Cannot be empty") {
             emailAddress.text! = ""
             password1.text! = ""
             password2.text! = ""
@@ -53,8 +53,6 @@ class RegisterViewController: UIViewController {
 
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             self.present(vc, animated: true, completion: nil)
-            
-            
         }
     }
     @IBAction func SegmentedSwitch(_ sender: Any) { //Show role description
@@ -66,19 +64,6 @@ class RegisterViewController: UIViewController {
             RoleDefinition.text! = "Multi-Pass"
         }
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension UIViewController

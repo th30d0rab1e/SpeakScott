@@ -39,13 +39,7 @@ class LoginViewController: UIViewController {
                 if(user.username == emailText.text){
                     userFound = true
                     if (user.password == passwordText.text){ //Password Match - Go to next screen
-                        if(user.role > 0){//user login
-                            let user = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-                            self.present(user, animated: true, completion: nil)
-                        } else if (user.role == 0){ //go to admin login
-                            let admin = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
-                            self.present(admin, animated: true, completion: nil)
-                        }
+                        showNextController(entity: user)
                     } else {
                         emailText.text = "Incorrect password"
                     }
@@ -84,6 +78,18 @@ class LoginViewController: UIViewController {
         m.role = 0
         
         users = [x, y, z, d, m]
+    }
+    
+    func showNextController(entity: User) {
+        if(entity.role > 0){
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            myVC.user = entity
+            navigationController?.pushViewController(myVC, animated: true)
+        } else if (entity.role == 0){
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
+            myVC.user = entity
+            navigationController?.pushViewController(myVC, animated: true)
+        }
     }
 
     /*

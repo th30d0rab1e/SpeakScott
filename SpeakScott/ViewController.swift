@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     var index = 0;
     var word:String = "";
     
+    var user = User()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder() // To get shake gesture
@@ -29,16 +31,21 @@ class ViewController: UIViewController {
         
         //(UIApplication.shared.delegate as! AppDelegate).saveContext()//Save CoreData
    
+//        if(condition == true) {
+//            creeLigueBouton.enabled = false
+//        } else {
+//            creeLigueBouton.enabled = true
+//        }
+        
+        let welcome = AVSpeechUtterance(string: "Welcome, \(user.username), swipe away")
+        welcome.voice = AVSpeechSynthesisVoice(language: "en-US")
+        let synth1 = AVSpeechSynthesizer()
+        synth1.speak(welcome)
+        
         addTestData()
         
         theLabel.text = listOfQuestions[index].question
         wordLabel.text = word;
-        
-        let string:String! = listOfQuestions[index].question
-        let utterance = AVSpeechUtterance(string: string)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        let synth = AVSpeechSynthesizer()
-        synth.speak(utterance)
     }
 
     override func didReceiveMemoryWarning() {
@@ -127,9 +134,11 @@ class ViewController: UIViewController {
         theLabel.text = string
     }
     
-    @IBAction func BackToAdmin(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
-        self.present(vc, animated: true, completion: nil)
+   
+    @IBAction func goToAdmin(_ sender: Any) {
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
+        myVC.user = user
+        navigationController?.pushViewController(myVC, animated: true)
     }
     
     
