@@ -8,24 +8,72 @@
 
 import UIKit
 
-class AdminViewController: UIViewController {
+class AdminViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     var user = User()
+    
+    var listOfQuestions  : [List] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self 
+        tableView.delegate = self
+        
+        listOfQuestions = addTestData()
+        print(listOfQuestions)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) { //Screen Opens
+        tableView.reloadData()
     }
     
     @IBAction func ToSpeakButton(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        self.present(vc, animated: true, completion: nil)
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        myVC.user = user
+        navigationController?.pushViewController(myVC, animated: true)
+    }
+    @IBAction func AddToList(_ sender: Any) {
+        //let nextVC = AdminEditViewController()
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "AdminEditViewController") as! AdminEditViewController
+        //nextVC.previousVC = self
+        myVC.user = user
+        navigationController?.pushViewController(myVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listOfQuestions.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let list = listOfQuestions[indexPath.row]
+        
+        cell.textLabel?.text = list.question
+        
+        return cell
+    }
+    
+    func addTestData() -> [List] {
+        //test data
+        
+        let x = List()
+        x.question = "Do you want some wine?"
+        x.approval = "Yes, I want some wine."
+        x.rejection = "No, I do not want some wine.";
+        
+        let y = List()
+        y.question = "Do you want some women?"
+        y.approval = "Yes, I want a penis in my mouth."
+        y.rejection = "No, I do not want some women."
+        
+        let z = List()
+        z.question = "Do you want some song?"
+        z.approval = "Yes, I want some song."
+        z.rejection = "No, I do not want some song."
+        
+        return [x, y, z]
     }
     
     /*

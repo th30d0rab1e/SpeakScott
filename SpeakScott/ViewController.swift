@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var theLabel: UILabel!
     @IBOutlet weak var swipeLabel: UILabel!
     @IBOutlet weak var wordLabel: UILabel!
+    @IBOutlet weak var ToAdminButton: UIBarButtonItem!
     
     var listOfQuestions  : [List] = []
     var index = 0;
@@ -31,11 +32,7 @@ class ViewController: UIViewController {
         
         //(UIApplication.shared.delegate as! AppDelegate).saveContext()//Save CoreData
    
-//        if(condition == true) {
-//            creeLigueBouton.enabled = false
-//        } else {
-//            creeLigueBouton.enabled = true
-//        }
+        
         
         let welcome = AVSpeechUtterance(string: "Welcome, \(user.username), swipe away")
         welcome.voice = AVSpeechSynthesisVoice(language: "en-US")
