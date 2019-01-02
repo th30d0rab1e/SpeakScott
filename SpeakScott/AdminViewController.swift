@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class AdminViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
+    let rootref = Database.database().reference()
     
     @IBOutlet weak var tableView: UITableView!
     var user = User()
@@ -64,9 +67,9 @@ class AdminViewController: UIViewController,UITableViewDataSource,UITableViewDel
         x.rejection = "No, I do not want some wine.";
         
         let y = List()
-        y.question = "Do you want some women?"
-        y.approval = "Yes, I want a penis in my mouth."
-        y.rejection = "No, I do not want some women."
+        y.question = "Do you want some Food?"
+        y.approval = "Yes, I want some food"
+        y.rejection = "No, I do not want some food."
         
         let z = List()
         z.question = "Do you want some song?"

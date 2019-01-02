@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88277A25E24FE1262519F5D4 /* libPods-SpeakScott.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4C098E6C77A5AA60131720 /* libPods-SpeakScott.a */; };
 		9CBB615A2086E1E6004F61B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB61592086E1E6004F61B7 /* AppDelegate.swift */; };
 		9CBB615C2086E1E6004F61B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB615B2086E1E6004F61B7 /* ViewController.swift */; };
 		9CBB615F2086E1E6004F61B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBB615D2086E1E6004F61B7 /* Main.storyboard */; };
@@ -19,9 +20,13 @@
 		9CDECC96209153BE003C9262 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDECC95209153BE003C9262 /* User.swift */; };
 		9CDECC9820940886003C9262 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDECC9720940886003C9262 /* AdminViewController.swift */; };
 		9CDECCA0209BF6DE003C9262 /* AdminEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDECC9F209BF6DE003C9262 /* AdminEditViewController.swift */; };
+		9CDECCA2209E20C9003C9262 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CDECCA1209E20C8003C9262 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		288FAAC9C452E1C39174BC69 /* Pods-SpeakScott.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakScott.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakScott/Pods-SpeakScott.debug.xcconfig"; sourceTree = "<group>"; };
+		3E8D26844CDAEA8D1EFF2C6D /* Pods-SpeakScott.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakScott.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakScott/Pods-SpeakScott.release.xcconfig"; sourceTree = "<group>"; };
+		8B4C098E6C77A5AA60131720 /* libPods-SpeakScott.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpeakScott.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBB61562086E1E6004F61B7 /* SpeakScott.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakScott.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBB61592086E1E6004F61B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CBB615B2086E1E6004F61B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +41,7 @@
 		9CDECC95209153BE003C9262 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CDECC9720940886003C9262 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		9CDECC9F209BF6DE003C9262 /* AdminEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEditViewController.swift; sourceTree = "<group>"; };
+		9CDECCA1209E20C8003C9262 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88277A25E24FE1262519F5D4 /* libPods-SpeakScott.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03A647471F3928512AA78021 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B4C098E6C77A5AA60131720 /* libPods-SpeakScott.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9CBB614D2086E1E6004F61B7 = {
 			isa = PBXGroup;
 			children = (
 				9CBB61582086E1E6004F61B7 /* SpeakScott */,
 				9CBB61572086E1E6004F61B7 /* Products */,
+				B33EB890D2A52FFB9D971086 /* Pods */,
+				03A647471F3928512AA78021 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +85,7 @@
 		9CBB61582086E1E6004F61B7 /* SpeakScott */ = {
 			isa = PBXGroup;
 			children = (
+				9CDECCA1209E20C8003C9262 /* GoogleService-Info.plist */,
 				9CBB61592086E1E6004F61B7 /* AppDelegate.swift */,
 				9CBB615B2086E1E6004F61B7 /* ViewController.swift */,
 				9CDECC91209014A3003C9262 /* RegisterViewController.swift */,
@@ -85,6 +103,15 @@
 			path = SpeakScott;
 			sourceTree = "<group>";
 		};
+		B33EB890D2A52FFB9D971086 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				288FAAC9C452E1C39174BC69 /* Pods-SpeakScott.debug.xcconfig */,
+				3E8D26844CDAEA8D1EFF2C6D /* Pods-SpeakScott.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,6 +119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CBB616B2086E1EA004F61B7 /* Build configuration list for PBXNativeTarget "SpeakScott" */;
 			buildPhases = (
+				436BCD2404F40140D54622C0 /* [CP] Check Pods Manifest.lock */,
 				9CBB61522086E1E6004F61B7 /* Sources */,
 				9CBB61532086E1E6004F61B7 /* Frameworks */,
 				9CBB61542086E1E6004F61B7 /* Resources */,
@@ -144,12 +172,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBB61672086E1EA004F61B7 /* LaunchScreen.storyboard in Resources */,
+				9CDECCA2209E20C9003C9262 /* GoogleService-Info.plist in Resources */,
 				9CBB61642086E1EA004F61B7 /* Assets.xcassets in Resources */,
 				9CBB615F2086E1E6004F61B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		436BCD2404F40140D54622C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeakScott-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9CBB61522086E1E6004F61B7 /* Sources */ = {
@@ -306,15 +356,13 @@
 		};
 		9CBB616C2086E1EA004F61B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 288FAAC9C452E1C39174BC69 /* Pods-SpeakScott.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZQ57T4SQDD;
 				INFOPLIST_FILE = SpeakScott/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.SpeakScott;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -324,15 +372,13 @@
 		};
 		9CBB616D2086E1EA004F61B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E8D26844CDAEA8D1EFF2C6D /* Pods-SpeakScott.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZQ57T4SQDD;
 				INFOPLIST_FILE = SpeakScott/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.SpeakScott;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

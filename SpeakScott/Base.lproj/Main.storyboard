@@ -406,7 +406,7 @@
                         <action selector="swipeUp:" destination="BYZ-38-t0r" id="hr3-TY-ObZ"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="down" id="AvF-4h-3b7">
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="right" id="AvF-4h-3b7">
                     <connections>
                         <action selector="SwipeDown:" destination="BYZ-38-t0r" id="dpW-Ga-QrF"/>
                     </connections>

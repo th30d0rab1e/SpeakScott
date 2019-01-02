@@ -148,9 +148,9 @@ class ViewController: UIViewController {
         x.rejection = "No, I do not want some wine.";
         
         let y = List()
-        y.question = "Do you want some women?"
-        y.approval = "Yes, I want a penis in my mouth."
-        y.rejection = "No, I do not want some women."
+        y.question = "Do you want some food?"
+        y.approval = "Yes, I want some food."
+        y.rejection = "No, I do not want some food."
         
         let z = List()
         z.question = "Do you want some song?"
@@ -333,18 +333,7 @@ class ViewController: UIViewController {
             synth.speak(utterance)
         }
     }
-    //get Questions
-//    func getQuestions() {
-//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//
-//        do {
-//            listOfQuestions = try context.fetch(List.fetchRequest()) as! [List]
-//            print (listOfQuestions)
-//        } catch {
-//            print("Cant getQuestions()")
-//        }
-//
-//    }
+
     
     
 }
